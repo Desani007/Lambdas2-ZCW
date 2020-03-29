@@ -1,6 +1,8 @@
 package Application;
 
 import java.util.List;
+import java.util.function.Predicate;
+
 // local class  is a nested class a class within a class
 public class Approaches {
 
@@ -22,7 +24,7 @@ public class Approaches {
         }
 
     }     public static void printPersons(
-                List<Person> roster, CheckPerson tester) {
+                List<Person> roster, Predicate<Person> tester) {
             for (Person p : roster) {
                 if (tester.test(p)) {
                     p.printPerson();
